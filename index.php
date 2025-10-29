@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="assets/logo_t.png" type="image/x-icon">
     <title>3R JARDINAGEM</title>
 </head>
-
 
 <body>
 
@@ -18,9 +18,8 @@
                 <ul>
                     <li><a href="index.php">Início</a></li>
                     <li><a href="sobre.php" class="active">Sobre</a></li>
-                    <li><a href="#">Serviços</a></li>
-                    <li><a href="#">Feedback</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="servicos.php">Serviços</a></li>
+                    <li><a href="formulario.php">Contato</a></li>
                 </ul>
             </nav>
         </div>
