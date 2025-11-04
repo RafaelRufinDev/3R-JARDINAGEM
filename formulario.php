@@ -1,3 +1,9 @@
+<?php
+include('conexao.php');
+
+$resultado = $conn->query("SELECT * FROM usuarios");
+?>
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
