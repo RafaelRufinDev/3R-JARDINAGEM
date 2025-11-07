@@ -11,9 +11,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $bairro = $_POST['bairro'];
     $cidade = $_POST['cidade'];
     $servicos = isset($_POST['servicos']) ? implode(", ", $_POST['servicos']) : "";
+    $mensagem = $_POST['mensagem'];
 
-    $sql = "INSERT INTO usuarios (Nome, email, Telefone, Logradouro, Numero, Complemento, Bairro, Cidade, Servicos)
-            VALUES ('$nome', '$email', '$telefone', '$logradouro', '$numero', '$complemento', '$bairro', '$cidade', '$servicos')";
+    $sql = "INSERT INTO usuarios (Nome, email, Telefone, Logradouro, Numero, Complemento, Bairro, Cidade, Servicos, Mensagem)
+            VALUES ('$nome', '$email', '$telefone', '$logradouro', '$numero', '$complemento', '$bairro', '$cidade', '$servicos', '$mensagem')";
 
     if ($conn->query($sql) === TRUE) {
         echo "<p style='color:green; text-align:center;'>Dados enviados com sucesso!</p>";
@@ -24,6 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $resultado = $conn->query("SELECT * FROM usuarios");
 ?>
+
 
 
 <!DOCTYPE html>
