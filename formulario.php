@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
-$resultado = $conn->query("SELECT * FROM usuarios");
+$resultado = $conn->query("SELECT * FROM clientes");
 ?>
 
 
