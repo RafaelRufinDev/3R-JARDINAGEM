@@ -1,8 +1,30 @@
 <?php
 include('conexao.php');
 
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nome = $_POST['nome'];
+    $email = $_POST['email'];
+    $telefone = $_POST['telefone'];
+    $logradouro = $_POST['logradouro'];
+    $numero = $_POST['numero'];
+    $complemento = $_POST['complemento'];
+    $bairro = $_POST['bairro'];
+    $cidade = $_POST['cidade'];
+    $servicos = isset($_POST['servicos']) ? implode(", ", $_POST['servicos']) : "";
+
+    $sql = "INSERT INTO usuarios (Nome, email, Telefone, Logradouro, Numero, Complemento, Bairro, Cidade, Servicos)
+            VALUES ('$nome', '$email', '$telefone', '$logradouro', '$numero', '$complemento', '$bairro', '$cidade', '$servicos')";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "<p style='color:green; text-align:center;'>Dados enviados com sucesso!</p>";
+    } else {
+        echo "<p style='color:red; text-align:center;'>Erro ao enviar: " . $conn->error . "</p>";
+    }
+}
+
 $resultado = $conn->query("SELECT * FROM usuarios");
 ?>
+
 
 <!DOCTYPE html>
 <html lang="pt-BR">
