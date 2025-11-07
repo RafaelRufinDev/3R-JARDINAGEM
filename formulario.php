@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $servicos = isset($_POST['servicos']) ? implode(", ", $_POST['servicos']) : "";
     $mensagem = $_POST['mensagem'];
 
-    $sql = "INSERT INTO usuarios (Nome, email, Telefone, Logradouro, Numero, Complemento, Bairro, Cidade, Servicos, Mensagem)
+    $sql = "INSERT INTO clientes (Nome, email, Telefone, Logradouro, Numero, Complemento, Bairro, Cidade, Servicos, Mensagem)
             VALUES ('$nome', '$email', '$telefone', '$logradouro', '$numero', '$complemento', '$bairro', '$cidade', '$servicos', '$mensagem')";
 
     if ($conn->query($sql) === TRUE) {

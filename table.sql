@@ -1,4 +1,4 @@
-CREATE TABLE nome_da_tabela (
+CREATE TABLE clientes (
     id INT(11) NOT NULL AUTO_INCREMENT,
     Nome VARCHAR(100) NOT NULL,
     email VARCHAR(150) NOT NULL,
