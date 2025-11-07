@@ -136,7 +136,7 @@ $resultado = $conn->query("SELECT * FROM clientes");
                             for="gramado1"> Corte regular do gramado</label></div>
                     <div><input type="checkbox" id="gramado2" name="servicos[]" value="aparar_bordas"><label
                             for="gramado2"> Aparar bordas e cantos</label></div>
-                    <div><input type="checkbox" id="gramado3" name="servicos[]" value="remocao_erbas"><label
+                    <div><input type="checkbox" id="gramado3" name="servicos[]" value="remocao_ervas"><label
                             for="gramado3"> Remoção de ervas daninhas</label></div>
 
                     <div><input type="checkbox" id="adubacao" name="servicos[]" value="adubacao"><label for="adubacao">
