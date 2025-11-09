@@ -17,9 +17,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             VALUES ('$nome', '$email', '$telefone', '$logradouro', '$numero', '$complemento', '$bairro', '$cidade', '$servicos', '$mensagem')";
 
     if ($conn->query($sql) === TRUE) {
-        echo "<p style='color:green; text-align:center;'>Dados enviados com sucesso!</p>";
+        echo "<script>
+                alert('Formulario respondido com sucesso!');
+                window.location.href = 'index.php';
+              </script>";
     } else {
-        echo "<p style='color:red; text-align:center;'>Erro ao enviar: " . $conn->error . "</p>";
+        echo "<script>
+                alert('Erro ao enviar: " . addslashes($conn->error) . "');
+                window.history.back();
+              </script>";
     }
 }
 
