@@ -28,7 +28,7 @@ $result = $conn->query($sql);
         }
         h1 {
             text-align: center;
-            color: #004aad;
+            color: #06402b;
             margin-bottom: 30px;
         }
         .tabela-principal {
@@ -53,9 +53,9 @@ $result = $conn->query($sql);
             text-align: left;
         }
         .tabela-principal th {
-            background-color: #004aad;
+            background-color: #06402b;
             color: white;
-            border-bottom: 2px solid #003580;
+            border-bottom: 2px solid #06402b;
         }
         .tabela-principal td {
             border-bottom: 1px solid #e0e0e0;
@@ -63,11 +63,11 @@ $result = $conn->query($sql);
         .mensagem-cell {
             padding: 15px;
             background: #f8f9fa;
-            border-left: 4px solid #004aad;
+            border-left: 4px solid #06402b;
         }
         .mensagem-titulo {
             font-weight: bold;
-            color: #004aad;
+            color: #06402b;
             margin-bottom: 5px;
         }
         .mensagem-conteudo {

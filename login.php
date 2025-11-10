@@ -46,7 +46,7 @@ if ($_POST) {
         }
         h1 {
             text-align: center;
-            color: #004aad;
+            color: #06402b;
             margin-bottom: 30px;
         }
         .form-group {
@@ -70,7 +70,7 @@ if ($_POST) {
         button {
             width: 100%;
             padding: 12px;
-            background-color: #004aad;
+            background-color: #06402b;
             color: white;
             border: none;
             border-radius: 5px;
@@ -78,7 +78,7 @@ if ($_POST) {
             cursor: pointer;
         }
         button:hover {
-            background-color: #003580;
+            background-color: #06402b;
         }
         .erro {
             background-color: #ffebee;
