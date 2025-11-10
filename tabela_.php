@@ -1,11 +1,21 @@
 <?php
-
 session_start();
+
+$tempo_expiracao = 1;
 
 if (!isset($_SESSION['logado']) || $_SESSION['logado'] !== true) {
     header('Location: login.php');
     exit;
 }
+
+if (isset($_SESSION['ultimo_acesso']) && (time() - $_SESSION['ultimo_acesso']) > $tempo_expiracao) {
+    session_unset();
+    session_destroy();
+    header('Location: login.php');
+    exit;
+}
+
+$_SESSION['ultimo_acesso'] = time();
 
 include('conexao.php');
 
