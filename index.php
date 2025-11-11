@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <link rel="shortcut icon" href="assets/logo_t.png" type="image/x-icon">
+    <link rel="stylesheet" href="styleh.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>3R JARDINAGEM</title>
 </head>
 
@@ -16,8 +18,8 @@
             <div class="logo">3R JARDINAGEM</div>
             <nav class="menu">
                 <ul>
-                    <li><a href="index.php">Início</a></li>
-                    <li><a href="sobre.php" class="active">Sobre</a></li>
+                    <li><a href="index.php" class="active">Início</a></li>
+                    <li><a href="sobre.php">Sobre</a></li>
                     <li><a href="servicos.php">Serviços</a></li>
                     <li><a href="formulario.php">Contato</a></li>
                 </ul>
@@ -28,11 +30,12 @@
     <section class="hero-section">
         <div class="hero-content">
             <h1>Transforme seu espaço externo e interno de maneira sustentável com diversas espécies de plantas.</h1>
-            <a href="#contato" class="cta-btn">Solicite um orçamento de paisagismo gratuito</a>
+            <a href="formulario.php" class="cta-btn">Solicite um orçamento de paisagismo gratuito</a>
         </div>
     </section>
 
     <section class="services-highlight">
+        <h2>Nossos Serviços</h2> <br>
         <div class="service-item">
             <div class="icon">🌿</div>
             <h3>Paisagismo Personalizado</h3>
@@ -51,11 +54,14 @@
     </section>
 
     <section class="portifolio-section">
-        <h2>Nosso Portifólio de Projetos</h2>
+        <h2>O que nossos clientes dizem</h2>
         <div class="portifolio-grid">
             <div class="portifolio-item">
-                <p class="Feedback-client">FEEDBACK1</p>
-                <p class="client-info">cliente1</p>
+                <p class="Feedback-client">"o trabalho da equipe foi ótimo, além de fazerem o serviço do plantio da
+                    grama, tiraram todas as nossas dúvidas sobre como manter e foram bastante proativos para resolver
+                    problemas limitantes do terreno. Estou extremamente satisfeito com a qualidade do serviço no geral."
+                </p>
+                <p class="client-info">Flávio Alves</p>
             </div>
 
             <div class="portifolio-item">
@@ -70,7 +76,8 @@
     </section>
 
     <section class="clients-say">
-        <h2>O que nossos clientes dizem</h2>
+
+    </section>
     </section>
 
     <footer class="footer">
@@ -95,13 +102,13 @@
                 <p>(81) 9 8598-4154 - Borges</p>
                 <p>3rjardinagem@gmail.com</p>
             </div>
-            <div class="footer-social">
-                <a href="#"><img src="assets/facebook_icon.png" alt="Facebook"></a>
-                <a href="#"><img src="assets/instagram_icon.png" alt="Instagram"></a>
-                <a href="#"><img src="assets/whatsapp_icon.png" alt="WhatsApp"></a>
-            </div>
-        </div>
 
+            <div class="footer-social">
+                <a href="https://www.instagram.com/3r_jardinagens?utm_source=qr&igsh=MXdsN2VqZm1pZXNibg=="
+                    target="_blank">
+                    <i class="fa-brands fa-instagram"></i></a>
+                <a href="https://wa.me/5581985984154" target="_blank"> <i class="fa-brands fa-whatsapp"></i></a>
+            </div>
     </footer>
 </body>
 

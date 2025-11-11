@@ -1,6 +1,6 @@
 :root {
-    --color-primary: #2e6a3d; 
-    --color-secondary: #8bc34a; 
+    --color-primary: #2e6a3d;
+    --color-secondary: #8bc34a;
     --color-accent: #a08c7a;
     --color-text-dark: #333;
     --color-text-light: #fff;
@@ -140,6 +140,14 @@ header .container {
     transform: translateY(-2px);
 }
 
+.services-highlight h2 {
+    font-size: 2em;
+    color: var(--color-primary);
+    margin-bottom: 40px;
+    position: relative;
+    display: inline-block;
+}
+
 .services-highlight {
     display: flex;
     justify-content: space-around;
@@ -216,7 +224,7 @@ header .container {
     padding: 40px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    min-height: 200px; 
+    min-height: 200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -339,12 +347,12 @@ header .container {
 
 .footer-social a i {
     font-size: 30px;
-    color: #fff; 
+    color: #fff;
     transition: color 0.3s ease;
 }
 
 .footer-social a:hover i {
-    color: var(--color-secondary); 
+    color: var(--color-secondary);
 }
 
 @media (max-width: 992px) {
