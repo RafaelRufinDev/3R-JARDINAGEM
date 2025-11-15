@@ -59,12 +59,6 @@ header .container {
     align-items: center;
 }
 
-.logo {
-    font-size: 1.5em;
-    font-weight: bold;
-    color: var(--color-primary);
-}
-
 .menu-toggle {
     display: none;
     background: transparent;
@@ -107,14 +101,38 @@ header .container {
     width: 100%;
 }
 
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://img.freepik.com/fotos-gratis/paisagem-de-pastagens-e-ambiente-verde-fundo-do-parque_1112-1182.jpg') no-repeat center center/cover;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--color-text-light);
+    margin-bottom: 40px;
+}
+
+.hero-content {
+    max-width: 800px;
+    padding: 20px;
+}
+
+.hero-content h1 {
+    font-size: 2.8em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .formulario {
     padding-top: 40px;
     padding-bottom: 60px;
+    background-color: var(--color-primary);
 }
 
 .formulario h1 {
     font-size: 2.5em;
-    color: var(--color-primary);
+    color: white;
     text-align: center;
     margin-bottom: 40px;
 }
@@ -217,7 +235,6 @@ header .container {
     margin-right: 10px;
     transform: scale(1.2);
     accent-color: var(--color-primary);
-    /* Cor do checkbox */
 }
 
 .checkbox-group label {
@@ -356,9 +373,9 @@ header .container {
 }
 
 @media (max-width:768px) {
-
     header .container {
-        justify-content: center;
+        flex-direction: column;
+        text-align: center;
         position: relative;
     }
 
@@ -383,15 +400,9 @@ header .container {
         grid-template-columns: 1fr;
     }
 
-    .logo {
-        text-align: center;
-    }
-
     .container {
         position: relative;
     }
-
-
 
     .footer-content {
         flex-direction: column;
@@ -446,4 +457,13 @@ header .container {
     .menu {
         display: none;
     }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 2px;
+        right: 12px;
+        z-index: 1000;
+    }
+
 }

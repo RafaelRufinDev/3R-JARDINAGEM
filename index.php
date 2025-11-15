@@ -35,7 +35,7 @@
     </section>
 
     <section class="services-carousel">
-        <h2>Nossos Serviços</h2>
+        <h2>Alguns Serviços Que Realizamos</h2>
         <div class="carousel-container">
             <button class="carousel-prev" aria-label="Anterior"><i class="fa-solid fa-chevron-left"></i></button>
 

@@ -192,16 +192,6 @@ header .container {
     display: block;
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
 .carousel-slide img {
     width: 100%;
     height: 300px;
@@ -452,6 +442,16 @@ header .container {
     color: var(--color-secondary);
 }
 
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
 @media (max-width: 768px) {
     .logo {
         text-align: center;
@@ -485,12 +485,6 @@ header .container {
     header .container {
         flex-direction: column;
         text-align: center;
-    }
-
-    .menu ul {
-        margin-top: 15px;
-        flex-direction: column;
-        gap: 10px;
     }
 
     .hero-content h1 {
@@ -539,16 +533,16 @@ header .container {
         position: relative;
     }
 
+    .menu {
+        display: none;
+    }
+
     .menu-toggle {
         display: block;
         position: absolute;
-        top: 16px;
+        top: 19px;
         right: 12px;
         z-index: 1000;
-    }
-
-    .menu {
-        display: none;
     }
 
     .services-carousel h2 {

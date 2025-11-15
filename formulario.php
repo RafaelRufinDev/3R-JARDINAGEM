@@ -32,8 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $resultado = $conn->query("SELECT * FROM clientes");
 ?>
 
-
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -41,7 +39,7 @@ $resultado = $conn->query("SELECT * FROM clientes");
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/logo_s.png" type="image/x-icon">
-    <link rel="stylesheet" href="stylec.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>3R JARDINAGEM</title>
 </head>
