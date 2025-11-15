@@ -25,6 +25,9 @@
 - Inicial;
 - Sobre;
 - Serviços;
-- Feedbacks;
 - Contato.
+
+# PARA ACESSO PRIVADO:
+
+- Foi desnvolvida uma página para acessar os dados enviados por meio do formulário, para obter um maior controle e organização dos dados recebidos 
 

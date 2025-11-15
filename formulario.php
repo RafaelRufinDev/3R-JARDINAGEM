@@ -40,8 +40,7 @@ $resultado = $conn->query("SELECT * FROM clientes");
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylec.css">
-    <link rel="shortcut icon" href="assets/logo_t.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/logo_s.png" type="image/x-icon">
     <link rel="stylesheet" href="stylec.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>3R JARDINAGEM</title>
@@ -51,7 +50,8 @@ $resultado = $conn->query("SELECT * FROM clientes");
 
     <header>
         <div class="container">
-            <div class="logo">3R JARDINAGEM</div>
+            <a href="index.php" class="logo">3R JARDINAGEM</a>
+            <button class="menu-toggle" aria-label="Abrir menu"><i class="fa-solid fa-bars"></i></button>
             <nav class="menu">
                 <ul>
                     <li><a href="index.php">Início</a></li>
@@ -207,6 +207,24 @@ $resultado = $conn->query("SELECT * FROM clientes");
             </div>
         </div>
     </footer>
+    <script>
+        (function() {
+            const toggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav.menu');
+            if (!toggle || !nav) return;
+
+            toggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                nav.classList.toggle('open');
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!nav.classList.contains('open')) return;
+                const isClickInside = nav.contains(e.target) || toggle.contains(e.target);
+                if (!isClickInside) nav.classList.remove('open');
+            });
+        })();
+    </script>
 </body>
 
 </html>

@@ -1,6 +1,6 @@
 :root {
-    --color-primary: #2e6a3d; 
-    --color-secondary: #8bc34a; 
+    --color-primary: #2e6a3d;
+    --color-secondary: #8bc34a;
     --color-accent: #a08c7a;
     --color-text-dark: #333;
     --color-text-light: #fff;
@@ -65,6 +65,15 @@ header .container {
     color: var(--color-primary);
 }
 
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #000000;
+}
+
 .menu ul {
     display: flex;
     gap: 25px;
@@ -99,20 +108,18 @@ header .container {
 }
 
 section {
-    padding: 60px 20px;
-    max-width: 1200px;
-    margin: 0 auto;
+    background-color: var(--color-primary);
 }
 
-section > h3 {
+section>h3 {
     font-size: 2.5em;
-    color: var(--color-primary);
+    color: white;
     text-align: center;
     margin-bottom: 50px;
     position: relative;
 }
 
-section > h3::after {
+section>h3::after {
     content: '';
     position: absolute;
     width: 80px;
@@ -131,8 +138,10 @@ section > h3::after {
 }
 
 .service-item {
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
     background-color: var(--color-background-white);
-    padding: 30px;
     border-radius: 8px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -160,13 +169,13 @@ section > h3::after {
     margin-bottom: 10px;
     font-size: 1.05em;
     color: var(--color-text-dark);
-    list-style: none; 
+    list-style: none;
     position: relative;
     padding-left: 25px;
 }
 
 .service-item ul li::before {
-    content: '🌿'; 
+    content: '🌿';
     position: absolute;
     left: 0;
     color: var(--color-secondary);
@@ -174,7 +183,7 @@ section > h3::after {
     line-height: 1.5;
 }
 
-section > h2 {
+section>h2 {
     font-size: 1.8em;
     color: var(--color-primary);
     margin-top: 40px;
@@ -280,12 +289,12 @@ section > h2 {
 
 .footer-social a i {
     font-size: 30px;
-    color: #fff; 
+    color: #fff;
     transition: color 0.3s ease;
 }
 
 .footer-social a:hover i {
-    color: var(--color-secondary); 
+    color: var(--color-secondary);
 }
 
 @media (max-width: 768px) {
@@ -293,7 +302,7 @@ section > h2 {
         padding: 40px 15px;
     }
 
-    section > h3 {
+    section>h3 {
         font-size: 2em;
         margin-bottom: 40px;
     }
@@ -302,7 +311,13 @@ section > h2 {
         padding: 20px;
     }
 
-        .footer-content {
+    header .container {
+        justify-content: center;
+        position: relative;
+    }
+
+
+    .footer-content {
         flex-direction: column;
         gap: 30px;
     }
@@ -315,23 +330,70 @@ section > h2 {
     }
 
     .footer-social {
+        justify-content: start;
+    }
+
+    section {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 30px;
         justify-content: center;
     }
-}
 
-section {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 30px;
-    justify-content: center;
-}
+    .service-item {
+        flex: 1 1 300px;
+        margin-top: 0;
+    }
 
-.service-item {
-    flex: 1 1 300px;
-    margin-top: 0;
-}
+    section>h3,
+    section>h2 {
+        flex-basis: 100%;
+        margin-bottom: 40px;
+    }
 
-section > h3, section > h2 {
-    flex-basis: 100%;
-    margin-bottom: 40px;
+    nav.menu {
+        position: absolute;
+        top: 60px;
+        right: 16px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 8px;
+        padding: 12px;
+        display: none;
+        z-index: 999;
+    }
+
+    nav.menu.open {
+        display: block;
+    }
+
+    nav.menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav.menu ul li a {
+        color: #fff;
+        padding: 6px 8px;
+        display: block;
+    }
+
+    .header .container {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 16px;
+        right: 12px;
+        z-index: 1000;
+    }
+
+    .menu {
+        display: none;
+    }
 }

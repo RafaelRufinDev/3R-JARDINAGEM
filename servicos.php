@@ -4,18 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="stylev.css">
-    <link rel="shortcut icon" href="assets/logo_t.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/logo_s.png" type="image/x-icon">
     <link rel="stylesheet" href="stylev.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>3R JARDINAGEM</title>
 </head>
 
+
 <body>
 
     <header>
         <div class="container">
-            <div class="logo">3R JARDINAGEM</div>
+            <a href="index.php" class="logo">3R JARDINAGEM</a>
+            <button class="menu-toggle" aria-label="Abrir menu"><i class="fa-solid fa-bars"></i></button>
             <nav class="menu">
                 <ul>
                     <li><a href="index.php">Início</a></li>
@@ -34,28 +35,29 @@
             <ul>
                 <li>Poda de arbustos e cerca-viva;</li>
                 <li>Poda de folhagens e flores secas;</li>
-                <li>Poda de árvores;</li>
+                <li>Poda de árvores.</li>
             </ul>
         </div>
         <div class="service-item">
-            <h2>Corte e Manutenção de Gramados:</h2>
+            <h2>Manutenção de Gramados</h2>
             <ul>
-                <li>Corte regular do gramado;</li>
                 <li>Aparar bordas e cantos;</li>
-                <li>Remoção de ervas daninhas;</li>
+                <li>Remoção de ervas daninhas.</li>
             </ul>
         </div>
         <div class="service-item">
             <h2>Adubação e Nutrição de Plantas</h2>
             <ul>
                 <li>Aplicação de fertilizantes orgânicos;</li>
+                <li>Adubo orgânico;</li>
+                <li>Controle de pragas e doenças.</li>
             </ul>
         </div>
         <div class="service-item">
             <h2>Plantio de Mudas</h2>
             <ul>
-                <li>Plantio de novas mudas e espécies.</li>
-                <li>Implantação de gramados (por tapetes)</li>
+                <li>Plantio de novas mudas e espécies;</li>
+                <li>Implantação de gramados (por tapetes).</li>
             </ul>
         </div>
         <div class="service-item">
@@ -96,6 +98,24 @@
             </div>
         </div>
     </footer>
+    <script>
+        (function() {
+            const toggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav.menu');
+            if (!toggle || !nav) return;
+
+            toggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                nav.classList.toggle('open');
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!nav.classList.contains('open')) return;
+                const isClickInside = nav.contains(e.target) || toggle.contains(e.target);
+                if (!isClickInside) nav.classList.remove('open');
+            });
+        })();
+    </script>
 </body>
 
 </html>

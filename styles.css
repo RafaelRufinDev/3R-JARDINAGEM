@@ -1,6 +1,6 @@
 :root {
-    --color-primary: #2e6a3d; 
-    --color-secondary: #8bc34a; 
+    --color-primary: #2e6a3d;
+    --color-secondary: #8bc34a;
     --color-accent: #a08c7a;
     --color-text-dark: #333;
     --color-text-light: #fff;
@@ -63,6 +63,15 @@ header .container {
     font-size: 1.5em;
     font-weight: bold;
     color: var(--color-primary);
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #000000;
 }
 
 .menu ul {
@@ -148,7 +157,7 @@ header .container {
     min-width: 250px;
     max-width: 300px;
     padding: 20px;
-    background-color: var(--color-background-white);
+    background-color: #458937;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
     transition: transform 0.3s ease;
@@ -164,14 +173,15 @@ header .container {
 }
 
 .about-values h4 {
-    color: var(--color-primary);
+    color: white;
     margin-bottom: 10px;
     font-size: 1.3em;
 }
 
 .about-values p {
     font-size: 0.95em;
-    color: var(--color-text-dark);
+    color: white;
+    text-align: justify;
 }
 
 .about-cta {
@@ -303,15 +313,31 @@ header .container {
 
 .footer-social a i {
     font-size: 30px;
-    color: #fff; 
+    color: #fff;
     transition: color 0.3s ease;
 }
 
 .footer-social a:hover i {
-    color: var(--color-secondary); 
+    color: var(--color-secondary);
 }
 
 @media (max-width: 768px) {
+    header .container {
+        justify-content: center;
+        position: relative;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
+    .menu-toggle {
+        position: absolute;
+        right: 20px;
+        top: 12px;
+        display: block;
+    }
+
     .page-banner h2 {
         font-size: 2em;
     }
@@ -333,7 +359,52 @@ header .container {
     }
 
     .footer-social {
-        justify-content: center;
+        justify-content: start;
+    }
+
+    nav.menu {
+        position: absolute;
+        top: 60px;
+        right: 16px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 8px;
+        padding: 12px;
+        display: none;
+        z-index: 999;
+    }
+
+    nav.menu.open {
+        display: block;
+    }
+
+    nav.menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav.menu ul li a {
+        color: #fff;
+        padding: 6px 8px;
+        display: block;
+    }
+
+    .header .container {
+        position: relative;
+    }
+
+    .menu-toggle {
+        display: block;
+        position: absolute;
+        top: 16px;
+        right: 12px;
+        z-index: 1000;
+    }
+
+    .menu {
+        display: none;
     }
 }
-

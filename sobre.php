@@ -4,19 +4,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="assets/logo_t.png" type="image/x-icon">
+    <link rel="shortcut icon" href="assets/logo_s.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>3R JARDINAGEM</title>
+
 </head>
 
 <body>
 
     <header>
         <div class="container">
-            <div class="logo">3R JARDINAGEM</div>
-            <nav class="menu">
+            <a href="index.php" class="logo">3R JARDINAGEM</a>
+            <button class="menu-toggle" aria-label="Abrir menu"><i class="fa-solid fa-bars"></i></button>
+            <nav class="menu" aria-label="Menu principal">
                 <ul>
                     <li><a href="index.php">Início</a></li>
                     <li><a href="sobre.php" class="active">Sobre</a></li>
@@ -33,7 +34,7 @@
     <section class="about-story-mission">
         <div class="story-text">
             <h3>Uma paixão que floresceu em negócio</h3>
-            <p>A <strong>3R JARDINAGEM</strong> começou quando Borges ingressou na empresa onde atualmente trabalha,
+            <p>A 3R JARDINAGEM começou quando Borges ingressou na empresa onde atualmente trabalha,
                 antes de se tornar zelador de escola ele iniciou nessa empresa como jardineiro, sem muito conhecimento
                 na área, entretanto, com o passar dos anos, nasceu então a paixão pela jardinagem. Atualmente, Borges
                 ainda
@@ -105,6 +106,24 @@
             </div>
         </div>
     </footer>
+    <script>
+        (function() {
+            const toggle = document.querySelector('.menu-toggle');
+            const nav = document.querySelector('nav.menu');
+            if (!toggle || !nav) return;
+
+            toggle.addEventListener('click', function(e) {
+                e.stopPropagation();
+                nav.classList.toggle('open');
+            });
+
+            document.addEventListener('click', function(e) {
+                if (!nav.classList.contains('open')) return;
+                const isClickInside = nav.contains(e.target) || toggle.contains(e.target);
+                if (!isClickInside) nav.classList.remove('open');
+            });
+        })();
+    </script>
 </body>
 
 </html>

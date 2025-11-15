@@ -1,6 +1,6 @@
 :root {
-    --color-primary: #2e6a3d; 
-    --color-secondary: #8bc34a; 
+    --color-primary: #2e6a3d;
+    --color-secondary: #8bc34a;
     --color-accent: #a08c7a;
     --color-text-dark: #333;
     --color-text-light: #fff;
@@ -63,6 +63,15 @@ header .container {
     font-size: 1.5em;
     font-weight: bold;
     color: var(--color-primary);
+}
+
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: #000000;
 }
 
 .menu ul {
@@ -178,7 +187,7 @@ header .container {
     margin-bottom: 20px;
 }
 
-.form-row > div {
+.form-row>div {
     flex: 1;
 }
 
@@ -207,7 +216,8 @@ header .container {
     width: auto;
     margin-right: 10px;
     transform: scale(1.2);
-    accent-color: var(--color-primary); /* Cor do checkbox */
+    accent-color: var(--color-primary);
+    /* Cor do checkbox */
 }
 
 .checkbox-group label {
@@ -337,15 +347,25 @@ header .container {
 
 .footer-social a i {
     font-size: 30px;
-    color: #fff; 
+    color: #fff;
     transition: color 0.3s ease;
 }
 
 .footer-social a:hover i {
-    color: var(--color-secondary); 
+    color: var(--color-secondary);
 }
 
-@media (max-width: 600px) {
+@media (max-width:768px) {
+
+    header .container {
+        justify-content: center;
+        position: relative;
+    }
+
+    .logo {
+        text-align: center;
+    }
+
     .contact-form {
         padding: 20px;
     }
@@ -355,13 +375,23 @@ header .container {
         gap: 0;
     }
 
-    .form-row > div {
+    .form-row>div {
         margin-bottom: 20px;
     }
 
     .checkbox-group {
         grid-template-columns: 1fr;
     }
+
+    .logo {
+        text-align: center;
+    }
+
+    .container {
+        position: relative;
+    }
+
+
 
     .footer-content {
         flex-direction: column;
@@ -376,6 +406,44 @@ header .container {
     }
 
     .footer-social {
-        justify-content: center;
+        justify-content: start;
+    }
+
+    nav.menu {
+        position: absolute;
+        top: 60px;
+        right: 16px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 8px;
+        padding: 12px;
+        display: none;
+        z-index: 999;
+    }
+
+    nav.menu.open {
+        display: block;
+    }
+
+    nav.menu ul {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    nav.menu ul li a {
+        color: #fff;
+        padding: 6px 8px;
+        display: block;
+    }
+
+    .header .container {
+        position: relative;
+    }
+
+    .menu {
+        display: none;
     }
 }
