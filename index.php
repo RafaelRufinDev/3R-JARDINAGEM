@@ -84,8 +84,12 @@
             </div>
 
             <div class="portifolio-item">
-                <p class="Feedback-client">FEEDBACK2</p>
-                <p class="client-info">cliente2</p>
+                <p class="Feedback-client">"Transformar um espaço em um jardim foi mais do que apenas plantar flores;
+                    foi
+                    ter um cantinho de paz dentro da minha própria casa. Cada planta escolhida, cada detalhe
+                    organizado e cada flor plantada carrega um sentimento. Hoje, olhar
+                    para esse jardim é enxergar um refúgio que cresce junto comigo."</p>
+                <p class="client-info">Maria Lúcia</p>
             </div>
             <div class="portifolio-item">
                 <p class="Feedback-client">FEEDBACK3</p>
