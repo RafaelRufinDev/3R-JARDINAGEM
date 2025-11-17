@@ -181,12 +181,13 @@ function copiarTexto(idElemento) {
                         "Vi que você entrou em contato sobre \"" . htmlspecialchars($row['Servicos']) . "\".\n" .
                         "Agradeço seu interesse! Estou retornando para ajudar com sua solicitação.\n\n" .
                         "Se precisar de mais alguma informação, estou à disposição!\n\n" .
-                        "Atenciosamente,\n3R-JARDINAGEM";
+                        "Atenciosamente.\n\n3R-JARDINAGEM";
                     ?>
 
                     <textarea id="resp<?= $row['id']; ?>" 
+                        readonly
                         style="width:100%; height:150px; margin-top:10px; padding:10px; border:1px solid #ccc; border-radius:8px; resize:none;">
-        <?= $resposta ?>
+                    <?= $resposta ?>
                     </textarea>
 
                     <button onclick="copiarTexto('resp<?= $row['id']; ?>')" 
