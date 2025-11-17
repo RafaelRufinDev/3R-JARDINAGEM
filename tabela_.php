@@ -108,6 +108,21 @@ $result = $conn->query($sql);
 </head>
 <body>
 
+<script>
+function copiarTexto(idElemento) {
+    const texto = document.getElementById(idElemento).value;
+
+    navigator.clipboard.writeText(texto).then(() => {
+        const aviso = document.getElementById("copiado" + idElemento.replace("resp",""));
+        aviso.style.display = "inline";
+
+        setTimeout(() => {
+            aviso.style.display = "none";
+        }, 1200);
+    });
+}
+</script>
+
 <h1>Lista de Clientes Cadastrados</h1>
 
 <?php if ($result->num_rows > 0): ?>
@@ -151,13 +166,43 @@ $result = $conn->query($sql);
             <tr>
                 <td class="mensagem-cell">
                     <div class="mensagem-titulo">Mensagem do Cliente:</div>
+
                     <div class="mensagem-conteudo">
                         <?= nl2br(htmlspecialchars($row['Mensagem'])); ?>
                     </div>
+
+                    <hr style="margin:15px 0;">
+
+                    <div class="mensagem-titulo">Resposta Automática (Sugerida: LEMBRE-SE TROCAR AS INFORMAÇÕES CONFORME A NECESSIDADE):</div>
+
+                    <?php 
+                        $resposta = 
+                        "Olá " . htmlspecialchars($row['Nome']) . ", tudo bem?\n\n" .
+                        "Vi que você entrou em contato sobre \"" . htmlspecialchars($row['Servicos']) . "\".\n" .
+                        "Agradeço seu interesse! Estou retornando para ajudar com sua solicitação.\n\n" .
+                        "Se precisar de mais alguma informação, estou à disposição!\n\n" .
+                        "Atenciosamente,\n3R-JARDINAGEM";
+                    ?>
+
+                    <textarea id="resp<?= $row['id']; ?>" 
+                        style="width:100%; height:150px; margin-top:10px; padding:10px; border:1px solid #ccc; border-radius:8px; resize:none;">
+        <?= $resposta ?>
+                    </textarea>
+
+                    <button onclick="copiarTexto('resp<?= $row['id']; ?>')" 
+                        style="margin-top:10px; background:none; border:none; cursor:pointer; color:blue; font-weight:bold;">
+                        Copiar
+                    </button>
+
+                    <span id="copiado<?= $row['id']; ?>" 
+                        style="display:none; margin-left:10px; color:green; font-size:13px;">
+                        Copiado!
+                    </span>
+
                 </td>
             </tr>
         </table>
-        
+
     </div>
     
     <?php endwhile; ?>
