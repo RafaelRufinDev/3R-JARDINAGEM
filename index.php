@@ -92,10 +92,10 @@
                 <p class="client-info">Maria Lúcia</p>
             </div>
             <div class="portifolio-item">
-                <p class="Feedback-client">O serviço prestado é de alta relevância na jardinagem no município de camutanga - PE. 
+                <p class="Feedback-client">"O serviço prestado é de alta relevância na jardinagem no município de camutanga - PE. 
                      E nas residências, particulares, principalmente  em minha  residência, onde eles têm  um carinho  para com as flores e com o 
                         excelente serviço. O reflorestamento que fazem  nas praças públicas da cidade é de grande importância, preservando a biodiversidade do planeta. 
-                        Minha nota para o trabalho desses preservadores é nota 10!</p>
+                        Minha nota para o trabalho desses preservadores é nota 10!"</p>
                 <p class="client-info">Antonio Rodrigues Neto</p>
             </div>
         </div>
