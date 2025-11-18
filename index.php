@@ -76,7 +76,7 @@
         <h2>O que nossos clientes dizem</h2>
         <div class="portifolio-grid">
             <div class="portifolio-item">
-                <p class="Feedback-client">"o trabalho da equipe foi ótimo, além de fazerem o serviço do plantio da
+                <p class="Feedback-client">"O trabalho da equipe foi ótimo, além de fazerem o serviço do plantio da
                     grama, tiraram todas as nossas dúvidas sobre como manter e foram bastante proativos para resolver
                     problemas limitantes do terreno. Estou extremamente satisfeito com a qualidade do serviço no geral."
                 </p>
